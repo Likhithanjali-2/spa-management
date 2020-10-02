@@ -1,0 +1,26 @@
+
+<div [hidden]="submitted" style="width: 400px;" class = "container">
+  <h2>Add Slot</h2>
+  <hr>
+  <form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Slot Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="slot.slotName" name="name">
+    </div>
+  <br>
+  <div class="form-group">
+    <label for="time">Slot Time</label>
+    <input type="text" class="form-control" id="text" required [(ngModel)]="slot.timing" name="text">
+  </div>
+
+    
+<br>
+    <button type="submit"  class="registerbtn">Add Slot</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Added Successfully</h4>
+  <a routerLink="../admin" class="nav-link" routerLinkActive="active">Back to dashboard</a>
+</div>

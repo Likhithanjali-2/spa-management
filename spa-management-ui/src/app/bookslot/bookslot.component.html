@@ -1,0 +1,40 @@
+
+<div [hidden]="submitted" style="width: 400px;" class = "container">
+  <h2>Book your slot</h2>
+  <hr>
+  <form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label for="name">Pick A Date</label>
+      <input type="date" class="form-control" id="date" required [(ngModel)]="booking.date" name="date">
+    </div>
+
+    <div class="select">
+      <select name="expert" id="expert" class="dropdown" required [(ngModel)]="booking.expertId"
+       (ngModelChange)="fetchAvailableSlotsForExpert()">
+        <option  class="dropdown-content">Choose your expert</option>
+        <option *ngFor="let expert of experts | async" value="{{expert.id}}" >{{ expert.name}} - {{expert.expertise}}</option>
+      </select>
+    </div>
+<br>
+    
+<!-- <input type="number" class="form-control" id="userid" value=12 required [(ngModel)]="booking.userId" name="userid"
+  /> -->
+    <div class="select">
+      
+      <select name="expert" id="dropdown" class="dropdown" required [(ngModel)]="booking.slotId">
+         <option value=0 class="dropdown-content">Choose your slot:</option>
+          <option *ngFor="let slot of availableSlots | async" value="{{slot.id}}">{{ slot.slotName}} - {{slot.timing}}
+          </option>
+      </select>
+    </div>
+<br>
+    <button type="submit"  class="registerbtn">Book My Slot</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You can check your appointment in the status {{ booking.id}} </h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+<a routerLink="../userpage" class="nav-link" routerLinkActive="active">Back to userpage</a>

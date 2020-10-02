@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+        <a routerLink="register" class="nav-link" routerLinkActive="active">Register</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="login" class="nav-link" routerLinkActive="active">Login</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="gallery" class="nav-link" routerLinkActive="active">Gallery</a>
+  </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <br>
+  <h1 style="text-align: center; color: rgb(67, 38, 70);margin:0em;">{{title}}</h1>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <span>Made with love by prograds</span>
+  </div>
+</footer>

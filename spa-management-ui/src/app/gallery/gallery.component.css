@@ -1,0 +1,43 @@
+.gal{
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: ghostwhite;
+}
+.in2{
+margin: 0em;
+}
+#img1{
+  margin-top: 0px;
+  height:200px;
+  width:400;
+}
+img{
+  margin-left:10px;
+  
+}
+#img4{
+  height:300px;
+  width:700px;
+  
+}
+#img2{
+  height:200px;
+  width:300px;
+  
+  margin-top: 0px;
+}
+#img6{
+  height:300px;
+  width:430px;
+  margin-left: 50px;
+}
+#img3{
+  height:200px;
+  width: 320px;
+  
+}
+#img5{
+  
+  height:200px;
+  width:220px;
+}

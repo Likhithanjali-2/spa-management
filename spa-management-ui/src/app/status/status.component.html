@@ -1,0 +1,19 @@
+<div [hidden]="submitted" style="width: 400px;" class = "container">
+  <h2>Check your appointment</h2>
+  <hr>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Enter appointment Id</label>
+      <input type="number" class="form-control" id="name" required [(ngModel)]="id" name="id">
+    </div>
+<br>
+    <button type="submit"  class="registerbtn">Check</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>appointment status for {{id}} is :  {{status}}</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+<a routerLink="../userpage" class="nav-link" routerLinkActive="active">Back to userpage</a>

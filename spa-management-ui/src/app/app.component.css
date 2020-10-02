@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width:100%;
+    height: 30px;
+    background-color: rgb(67, 38, 70);
+    text-align: center;
+    padding:10px;
+    color: white;
+}
+.navbar{
+    background-color: rgb(67, 38, 70);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(67, 38, 70);
+
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color:rgb(50, 30, 53);
+  }
+  
+  .active {
+    background-color:  rgb(50, 30, 53);
+  }
